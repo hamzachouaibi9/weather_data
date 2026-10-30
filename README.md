@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Weather Data Pipeline
 
 ## What it does
@@ -106,6 +105,3 @@ Functions log context (for example, the API's error reason) and re-raise; the en
 - [ ] Airflow DAG (local, in Docker)
 - [ ] Terraform for GCP resources
 - [ ] CI/CD with GitHub Actions
-=======
-
->>>>>>> b4b4f2ebe85799eedbd682c2444e6aebcba9c615
