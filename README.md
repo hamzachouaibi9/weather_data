@@ -2,6 +2,40 @@
 ## What it does
 ## Architecture
 ## How to run
+
+**Requirements:** Python 3.15 (tested on Windows, PowerShell). No API key needed.
+
+```powershell
+# 1. Clone the repo
+git clone https://github.com/hamzachouaibi9/weather_data.git
+cd weather_data
+
+# 2. Create a virtual environment
+python -m venv .venv
+
+# 3. Activate it (your prompt should now start with "(.venv)")
+.\.venv\Scripts\Activate.ps1
+
+# 4. Install dependencies
+pip install -r requirements.txt
+
+# 5. Run the extract
+python extract.py
+```
+
+**Output:** the raw API response is saved to `data/weather_YYYY-MM-DD.json`
+(date in UTC). Progress and errors are logged to the terminal.
+
+**Exit codes:** `0` on success, `1` on any failure, so the script can be run by a scheduler.
+
+> **Windows note:** if step 3 fails with *"running scripts is disabled on this system"*,
+> allow local scripts for your user once, then retry:
+> ```powershell
+> Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+> ```
+>
+> **macOS/Linux:** use `source .venv/bin/activate` in step 3.
+
 ## Design decisions
 ## Design decisions
 
