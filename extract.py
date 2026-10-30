@@ -10,7 +10,7 @@ def fetch_weather(lat, long):
         "longitude" : long,
         "hourly" : "temperature_2m",    
     }
-    response = requests.get(url, params=params)
+    response = requests.get(url, params=params, timeout=10)
     print(response.url)
     response.raise_for_status()
     data = response.json()
