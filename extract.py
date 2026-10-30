@@ -1,6 +1,6 @@
 import requests
 import json
-from datetime import datetime
+from datetime import datetime, UTC
 from pathlib import Path
 
 def fetch_weather(lat, long):
@@ -25,7 +25,7 @@ def save_raw(data, date_str):
     return file
 
 def main():
-    now = datetime.now()
+    now = datetime.now(UTC)
     today = now.strftime("%Y-%m-%d")
     weather = fetch_weather(52.52, 13.41)
     path = save_raw(weather, today)
